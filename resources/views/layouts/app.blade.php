@@ -33,7 +33,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Meun
+                    Menu
                 </a>
 
                 <a class="navbar-brand" href="{{ url('/translation/list') }}">
