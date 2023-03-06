@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Laravel Quickstart - Basic</title>
+    <title>Youtube Edit</title>
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
@@ -33,14 +33,14 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Menu
+                    メニュー
                 </a>
 
                 <a class="navbar-brand" href="{{ url('/translation/list') }}">
-                    影片翻譯編輯
+                    ビデオ編集
                 </a>
                 <a class="navbar-brand" href="{{ url('/question/list') }}">
-                    問題翻譯編輯
+                    問題編集
                 </a>
             </div>
 
