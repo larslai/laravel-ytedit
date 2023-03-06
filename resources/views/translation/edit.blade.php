@@ -3,39 +3,37 @@
 
 @section('content')
     <div class="container">
-        <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-        <div id="player"></div>
-        <div>
-          <button id="preious_btn">Preious</button>
-          <button id="play_btn">Play</button>
-          <button id="next_btn">Next</button>
-        </div>
-        <div class="flex-container">
-          <div class="edit-container">
-            <div>
-              <span>日文</span>
+        <div class="row">
+          <div class="col-lg-12 col-sm-12">
+            <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+            <div id="player" style="width: 100%; height:320px;"></div>
+          </div>
+          <div class="col-lg-12 col-sm-12">
+              <button class="btn btn-secondary" id="preious_btn">前へ</button>
+              <button class="btn btn-secondary" id="play_btn">プレイ・ヘビロテ</button>
+              <button class="btn btn-secondary" id="next_btn">次へ</button>
+          </div>
+          <div class="flex-container col-lg-12 col-sm-12" style="margin-top: 20px;">
+            <div class="edit-container col-lg-12 col-sm-12">
+              <div>
+                <span id="showing_jp_subtitle">日本語字幕内容</span>
+              </div>
+              <div>
+                <textarea id="edit_jp_area" class="edit-area" style="min-width: 100%; height: 100px;" placeholder="字幕編集ところ"></textarea>
+              </div>
             </div>
-            <div>
-              <span id="showing_jp_subtitle">字幕顯示區</span>
-            </div>
-            <div>
-              <textarea id="edit_jp_area" class="edit-area" placeholder="字幕調整區"></textarea>
+            <div class="edit-container col-lg-12 col-sm-12" style="margin-top: 20px;">
+              <div>
+                <span id="showing_tw_subtitle">中国語字幕内容</span>
+              </div>
+              <div>
+                <textarea id="edit_tw_area" class="edit-area" style="min-width: 100%; height: 100px;" placeholder="字幕編集ところ"></textarea>
+              </div>
             </div>
           </div>
-          <div class="edit-container">
-            <div>
-              <span>中文</span>
-            </div>
-            <div>
-              <span id="showing_tw_subtitle">字幕顯示區</span>
-            </div>
-            <div>
-              <textarea id="edit_tw_area" class="edit-area" placeholder="字幕調整區"></textarea>
-            </div>
+          <div class="col-lg-12 col-sm-12" style="margin-top: 20px;">
+            <button class="btn btn-primary" id="update_btn">字幕更新</button>
           </div>
-        </div>
-        <div>
-          <button id="update_btn">字幕更新儲存</button>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
           integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -245,11 +243,11 @@
               },
               dataType: "json",
               success : function(jsonObjects) {
-                alert("Update success.");
+                alert("更新成功.");
                 lockMode(false);
               },
               error: function(XMLHttpRequest, textStatus, errorThrown) {
-                alert("Update Fail");
+                alert("更新失敗");
                 console.log(errorThrown);
               }
             });
